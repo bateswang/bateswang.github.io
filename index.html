@@ -26,10 +26,17 @@
         return defaultEv;
     }
     var pageKit = getEvent();
+    var oddVal = "";
     $("#num").bind(pageKit,function(){
         var $this = $(this);
         var val = $this.val();
-        $this.val(val.substring(4,0).replace(/\D/g,""));
+        if(val=="" && oddVal.length>1){
+            $this.val(oddVal.substring(4,0));
+            return false;
+        }else{
+            $this.val(val.substring(4,0).replace(/\D/g,""));
+            oddVal = val;
+        }
     });
 </script>
 </body>
