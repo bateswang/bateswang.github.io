@@ -12,32 +12,20 @@
     </script>
 </head>
 <body>
-<input type="number" id="num">
 <script>
-    function getEvent() {
-        var defaultEv = "input";
-        var isIe = navigator.userAgent.indexOf("MSIE");
-        var isAndroid = navigator.userAgent.match(/android/i);
-        if(isIe!=-1){
-            defaultEv = "propertychange";
-            return defaultEv;
-        }
-        if(isAndroid) defaultEv = "keyup";
-        return defaultEv;
-    }
-    var pageKit = getEvent();
-    var oddVal = "";
-    $("#num").bind(pageKit,function(){
-        var $this = $(this);
-        var val = $this.val();
-        if(val=="" && oddVal.length>1){
-            $this.val(oddVal.substring(4,0));
-            return false;
+function getUserMsg(){
+    var ua= navigator.userAgent.toLowerCase();
+    if (/iphone|ipad|ipod/.test(ua)) {
+        if(navigator.userAgent.indexOf('UCBrowser') > -1) {
+            alert("this is apple phone UCbrowser");
         }else{
-            $this.val(val.substring(4,0).replace(/\D/g,""));
-            oddVal = val;
+            alert("not UCbrowser");
         }
-    });
+    }else{
+        alert("not iphone");
+    }
+}
+getUserMsg();
 </script>
 </body>
 </html>
