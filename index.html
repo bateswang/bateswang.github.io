@@ -25,7 +25,11 @@ function getUserMsg(){
         alert("not iphone");
     }
 }
-getUserMsg();
+$("document").on("keyup",function(e){
+    if(e.keyCode==13){
+        alert("this is enter")
+    }
+});
 </script>
 </body>
 </html>
