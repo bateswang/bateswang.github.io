@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
     <title>Title</title>
     <script >
         /*! jQuery v1.11.3 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license */
@@ -17,17 +18,17 @@
     </style>
 </head>
 <body style="overflow:hidden;">
-    <div style="height:100%;background:red;overflow:auto;">
+    <div style="height:100%;background:red;overflow:auto;" id="d">
         <div style="width:80%;height:2000px;background:black;">
             <p>123</p>
-            <p>123</p>
-            <p>123</p>
-            <p>123</p>
-            <p>123</p><p>123</p><p>123</p><p>123</p><p>123</p><p>123</p><p>123</p>
-            <p>123</p><p>123</p><p>123</p><p>123</p><p>123</p><p>123</p><p>123</p>
+            <p>222</p>
+            <p>333</p>
+            <p>444p>
+            <p>4444p><p>123</p><p>123</p><p>345</p><p>123</p><p>23324</p><p>123</p>
+            <p>1512523</p><p>123</p><p>53634</p><p>123</p><p>123</p><p>123</p><p>233232</p>
             <p>123</p><p>123</p><p>123</p><p>123</p><p>123</p><p>123</p><p>123</p><p>123</p>
-            <p>123</p><p>123</p><p>123</p><p>123</p><p>123</p><p>123</p><p>123</p><p>123</p>
-            <p>123</p><p>123</p><p>123</p><p>123</p><p>123</p><p>123</p><p>123</p>
+            <p>125125</p><p>55556</p><p>123</p><p>123</p><p>123</p><p>123</p><p>323232</p><p>123</p>
+            <p>123</p><p>123</p><p>56346754</p><p>634634</p><p>123</p><p>123</p><p>123</p>
         </div>
     </div>
 <script>
@@ -48,6 +49,10 @@ $("body").on("touchmove",function(e){
         e.preventDefault();
         e.stopPropagation();
 },false);
+$("#d").on("touchmove",function(e){
+    e.stopPropagation();
+    return true;
+});
 </script>
 </body>
 </html>
